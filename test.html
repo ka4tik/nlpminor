@@ -1,0 +1,105 @@
+<html>
+<head>
+    <style type="text/css">
+    body {background-color:grey;}
+    h1 { font-size:200%;color:black;}
+    p { font-size:120%;color:blue;}
+    #left{
+        position:fixed;
+        right:100px;
+        top:200px;
+    }
+    .textbox{
+    background-color : #99FFCC;
+	border: 2px solid #008000;
+    }
+    input#gobutton{
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    padding:5px 25px; /*add some padding to the inside of the button*/
+    background:#35b128; /*the colour of the button*/
+    border:1px solid #33842a; /*required or the default border for the browser will appear*/
+    /*give the button curved corners, alter the size as required*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*give the button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    /*style the text*/
+    color:#f3f3f3;
+    font-size:1.1em;
+    }
+    /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+    input#gobutton:hover, input#gobutton:focus{
+    background-color :#399630; /*make the background a little darker*/
+    /*reduce the drop shadow size to give a pushed button effect*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
+    
+
+    /***FIRST STYLE THE BUTTON***/
+    input#bigbutton {
+    width:500px;
+    background: #3e9cbf; /*the colour of the button*/
+    padding: 8px 14px 10px; /*apply some padding inside the button*/
+    border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    /*style the text*/
+    font-size:1.5em;
+    font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:.1em;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: #fff;
+    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    /*give the corners a small curve*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    }
+    /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+    input#bigbutton:hover, input#bigbutton:focus {
+    color:#dfe7ea;
+    /*reduce the size of the shadow to give a pushed effect*/
+    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    }
+    #italic
+    {
+        font-style:italic;
+    }
+    #oblique
+    {
+        font-style:oblique;
+        color:red;
+    }
+    img{
+        width: 180px;
+        height: auto;
+    }
+
+
+    </style>
+    </head>
+    <body>
+    <img id="left" src="static/images/logo.png">
+    <h1 id="italic">NLP minor project</h1>
+    <p> Enter Text Below : </p>
+    <form action="/sign" method="post">
+      <div><textarea class="textbox" name="content" rows="25" cols="120"></textarea></div>
+      <div><input id="gobutton" type="submit" value="Get Sentiment"></div>
+      <!--<div><input id="bigbutton" type="submit" value="Get Sentiment"></div>-->
+    </form>
+    <p id="oblique">By: 
+    Aditya Gaurav, 
+    Aman Gupta,
+    Ashish Yadav,
+    Kartik Singal</p>
+  </body>
+</html>

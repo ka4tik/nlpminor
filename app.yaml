@@ -1,0 +1,23 @@
+application: nlpminor
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+
+- url: /images
+  static_dir: static/images
+
+- url: /images/(.*)
+  static_files: static/images/\1
+  upload: static/images/(.*)
+
+- url: /.*
+  script: nlpminor.application
+
+
+libraries:
+- name: webapp2
+  version: latest
